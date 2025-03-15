@@ -1,0 +1,61 @@
+*{
+    margin:0;
+    padding:0;
+}
+h1 {
+    color:red;
+    margin: 20px 5px 120px;
+    text-align: center;
+}
+body {
+    background-image:url("../img/prao.jpg");
+    background-size:cover;
+}
+
+.caja-cabra {
+    animation-name:bee;
+    animation-duration:7s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    display:block;
+}
+@keyframes bee {
+    from {margin-left:0;}
+    to {margin-left:80%;}
+ }
+
+.cabra {
+    animation-name: cabrita;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    background-image:url("../img/cabra.png");
+    width:180px;
+    height:148px;
+}
+
+@keyframes cabrita {
+    0% {rotate: 0deg;}
+    25% {rotate: 10deg;}
+    50% {rotate: 0deg;}
+    75% {rotate: -10deg;}
+    100% {rotate: 0deg;}
+}
+
+.cabra:hover {
+    animation-duration: 0.2s;
+
+}
+
+ 
+.cabra:active{
+    animation-name: atrapada;
+    background-image:url("../img/cabra-susto.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+
+}
+
+.caja-cabra:active{
+    animation-play-state: paused;
+}
